@@ -8,18 +8,13 @@ int main(void)
 {
 	int i;
 
-	for (i = 0; i < 16; i++)
+	for (i = 48; i < 58; i++)
 	{
-		if (i < 10)
-		{
-			/* Convert to character using ASCII values */
-			putchar('O' + i);
-		}
-		else
-		{
-			/* Convert to lowercae hexadecimal character */
-			putchar('a' + (i - 10));
-		}
+		putchar(i);
+	}
+	for (i = 98; i < 103; i++)
+	{
+		putchar(i);
 	}
 	putchar('\n');
 	return (0);
