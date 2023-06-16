@@ -8,17 +8,16 @@ int main(void)
 {
 	int i;
 
-	// Print numbers of base 16 in lowercase
 	for (i = 0; i < 16; i++)
 	{
 		if (i < 10)
 		{
-			// Convert to character using ASCII value
-			putchar('0' + i);
+			/* Convert to character using ASCII values */
+			putchar('O' + i);
 		}
 		else
 		{
-			// Convert to lowercae hexadecimal character
+			/* Convert to lowercae hexadecimal character */
 			putchar('a' + (i - 10));
 		}
 	}
