@@ -15,14 +15,12 @@ int main(void)
 		putchar(lc);
 		lc++;
 	}
-	
 	/* Print uppercase alphabet */
 	while (uc <= 'Z')
 	{
 		putchar(uc);
 		uc++;
 	}
-
 	/* print a new line */
 	putchar('\n');
 	return (0);
