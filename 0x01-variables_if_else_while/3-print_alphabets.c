@@ -6,7 +6,8 @@
  */
 int main(void)
 {
-	char lc = 'a', uc = 'A';
+	char lc = 'a';
+	char uc = 'A';
 
 	/* Print lowercase alphabet */
 	while (lc <= 'z')
