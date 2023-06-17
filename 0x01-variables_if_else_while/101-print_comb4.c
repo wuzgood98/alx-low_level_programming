@@ -16,7 +16,7 @@ int main(void)
 			for (k = j + 1; k < 10; k++)
 			{
 				/* Print the first digit */
-				puthcar('O' + i);
+				putchar('O' + i);
 				/* Print the second digit */
 				putchar('O' + j);
 				/* Print the third digit */
