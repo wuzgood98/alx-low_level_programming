@@ -16,11 +16,11 @@ int main(void)
 			for (k = j + 1; k < 10; k++)
 			{
 				/* Print the first digit */
-				putchar('O' + i);
+				putchar('0' + i);
 				/* Print the second digit */
-				putchar('O' + j);
+				putchar('0' + j);
 				/* Print the third digit */
-				putchar('O' + k);
+				putchar('0' + k);
 				if (i < 7 || j < 8 || k < 9)
 				{
 					/* Print the comma separator */
