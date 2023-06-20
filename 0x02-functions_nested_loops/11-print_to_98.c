@@ -5,9 +5,9 @@
  *
  * @n: parameter as interger
  *
- * Return: always return 0
+ * Return: returns nothing
  */
-int print_to_98(int n)
+void print_to_98(int n)
 {
 	int i;
 
@@ -37,5 +37,4 @@ int print_to_98(int n)
 			}
 		}
 	}
-	return (0);
 }
