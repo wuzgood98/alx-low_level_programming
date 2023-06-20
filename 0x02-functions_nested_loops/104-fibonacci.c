@@ -6,17 +6,17 @@
  */
 int main(void)
 {
-	unsigned long long i, a, b, c;
+	unsigned long i, a, b, c;
 
 	a = 1;
 	b = 2;
 
-	printf("%llu, %llu", a, b);
+	printf("%lu, %lu", a, b);
 
 	for (i = 3; i <= 98; i++)
 	{
 		c = a + b;
-		printf(", %llu", c);
+		printf(", %lu", c);
 
 		a = b;
 		b = c;
