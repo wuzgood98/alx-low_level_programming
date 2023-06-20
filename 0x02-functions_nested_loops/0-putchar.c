@@ -7,7 +7,7 @@
  */
 int main(void)
 {
-	int chr[8] = {95,112,117,116,99,104,97,114};
+	int chr[8] = {95, 112, 117, 116, 99, 104, 97, 114};
 	int i, sz;
 
 	sz = sizeof(chr) / sizeof(chr[0]);
