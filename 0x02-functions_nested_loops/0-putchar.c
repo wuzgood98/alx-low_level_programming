@@ -13,9 +13,9 @@ int main(void)
 	sz = sizeof(chr) / sizeof(chr[0]);
 	for (i = 0; i < sz; i++)
 	{
-		putchar(chr[i]);
+		_putchar(chr[i]);
 	}
 
-	putchar('\n');
+	_putchar('\n');
 	return (0);
 }
