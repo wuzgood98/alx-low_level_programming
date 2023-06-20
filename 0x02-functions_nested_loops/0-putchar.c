@@ -7,13 +7,13 @@
  */
 int main(void)
 {
-	int char[8] = {95,112,117,116,99,104,97,114};
+	int chr[8] = {95,112,117,116,99,104,97,114};
 	int i, sz;
 
-	sz = sizeof(char) / sizeof(char[0]);
+	sz = sizeof(chr) / sizeof(chr[0]);
 	for (i = 0; i < sz; i++)
 	{
-		putchar(char[i]);
+		putchar(chr[i]);
 	}
 
 	putchar('\n');
