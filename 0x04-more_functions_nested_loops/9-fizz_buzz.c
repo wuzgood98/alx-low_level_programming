@@ -8,26 +8,30 @@
 
 int main(void)
 {
-	int index;
+	int num;
 
-	for (index = 1; index <= 100; index++)
+	for (num = 1; num <= 100; num++)
 	{
-		if ((index % 3 == 0) && (index % 5 == 0))
+		if ((num % 3 == 0) && (num % 5 == 0))
 		{
-			printf(" FizzBuzz");
+			printf("FizzBuzz");
 		}
 		else if (index % 3 == 0)
 		{
-			printf(" Fizz");
+			printf("Fizz");
 		}
 		else if (index % 5 == 0)
 		{
-			printf(" Buzz");
+			printf("Buzz");
 		}
 		else
 		{
-			printf(" %d", index);
+			printf("%d", index);
 		}
+
+		if (num == 100)
+			continue;
+		printf(" ");
 	}
 
 	printf("\n");
