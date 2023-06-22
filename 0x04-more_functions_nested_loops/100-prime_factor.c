@@ -16,7 +16,7 @@ int main(void)
 
 	while (f * f <= num)
 	{
-		if(num % f == 0)
+		if (num % f == 0)
 			num /= f;
 		else
 			f++;
