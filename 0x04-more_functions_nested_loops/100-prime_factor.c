@@ -8,7 +8,7 @@
  */
 int main(void)
 {
-	long long num, f;
+	long num, f;
 
 	num = 612852475143;
 	f = 2;
@@ -20,6 +20,6 @@ int main(void)
 		else
 			f++;
 	}
-	printf("%lld\n", num);
+	printf("%ld\n", num);
 	return (0);
 }
