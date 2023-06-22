@@ -6,6 +6,7 @@
  *
  * Return: always 0.
  */
+
 int main(void)
 {
 	long num, f;
@@ -20,6 +21,8 @@ int main(void)
 		else
 			f++;
 	}
+
 	printf("%ld\n", num);
+
 	return (0);
 }
