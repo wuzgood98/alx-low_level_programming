@@ -16,17 +16,17 @@ int main(void)
 		{
 			printf("FizzBuzz");
 		}
-		else if (index % 3 == 0)
+		else if (num % 3 == 0)
 		{
 			printf("Fizz");
 		}
-		else if (index % 5 == 0)
+		else if (num % 5 == 0)
 		{
 			printf("Buzz");
 		}
 		else
 		{
-			printf("%d", index);
+			printf("%d", num);
 		}
 
 		if (num == 100)
