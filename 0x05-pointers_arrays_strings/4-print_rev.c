@@ -9,10 +9,17 @@
 
 void print_rev(char *s)
 {
-	int length = _strlen(s);
+	int strlen = 0;
 	int i;
 
-	for (i = length - 1; i >= 0; i--)
+	while (strlen >= 0)
+	{
+		if (s[strlen] == '\0')
+			break;
+		strlen++;
+	}
+
+	for (i = strlen; i >= 0; i--)
 	{
 		_putchar(s[i]);
 	}
