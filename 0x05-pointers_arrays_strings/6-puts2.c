@@ -20,7 +20,7 @@ void puts2(char *str)
 			break;
 		}
 
-		if (str[length] % 2 == 0)
+		if (str[length] % 2 != 0)
 			continue;
 
 		_putchar(str[length]);
