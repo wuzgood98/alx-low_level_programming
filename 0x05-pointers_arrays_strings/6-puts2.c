@@ -20,10 +20,9 @@ void puts2(char *str)
 			break;
 		}
 
-		if (str[length] % 2 != 0)
-			continue;
+		if (str[length] % 2 == 0)
+			_putchar(str[length]);
 
-		_putchar(str[length]);
 		length++;
 	}
 }
