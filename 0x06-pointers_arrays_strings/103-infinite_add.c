@@ -20,7 +20,7 @@ char *add_chars(char *num1, char *num2, char *r, int r_idx)
 
 	for (; *num1 && *num2; num1--, num2--, r_idx--)
 	{
-		number = (*num1 - '0') + (*num2 + '0');
+		number = (*num1 - '0') + (*num2 - '0');
 		number += div;
 		r[r_idx] = (number % 10) + '0';
 		div = number / 10;
