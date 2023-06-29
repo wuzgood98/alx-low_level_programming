@@ -26,7 +26,7 @@ void print_buffer(char *b, int size)
 			if (n < size)
 				printf("%02x", b[n]);
 			else
-				printf(" ");
+				printf("  ");
 		}
 		printf(" ");
 		for (o = m; o < m + 10; o++)
