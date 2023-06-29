@@ -15,31 +15,29 @@ void print_buffer(char *b, int size)
 
 	if (size <= 0)
 		printf("\n");
-	else
+
+	for (m = 0; m < size; m += 10)
 	{
-		for (m = 0; m < size; m += 10)
+		printf("%08x:", m);
+		for (n = m; n < m + 10; n++)
 		{
-			printf("%08x:", m);
-			for (n = m; n < m; n++)
-			{
-				if (n % 2 == 0)
-					printf(" ");
-				if (n < size)
-					printf("%02x", b[n]);
-				else
-					printf(" ");
-			}
-			printf(" ");
-			for (o = m; o < m + 10; o++)
-			{
-				if (o >= size)
-					break;
-				if (b[o] <= 31 || b[o] >= 127)
-					printf("%c", '.');
-				else
-					printf("%c", b[o]);
-			}
-			printf("\n");
+			if (n % 2 == 0)
+				printf(" ");
+			if (n < size)
+				printf("%02x", b[n]);
+			else
+				printf(" ");
 		}
+		printf(" ");
+		for (o = m; o < m + 10; o++)
+		{
+			if (o >= size)
+				break;
+			if (b[o] <= 31 || b[o] >= 127)
+				printf("%c", '.');
+			else
+				printf("%c", b[o]);
+		}
+		printf("\n");
 	}
 }
