@@ -22,8 +22,8 @@ char *rot13(char *str)
 				str[i] = rot13_chars[j];
 				break;
 			}
-			i++;
 		}
+		i++;
 	}
 	return (str);
 }
