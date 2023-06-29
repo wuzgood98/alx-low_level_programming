@@ -33,7 +33,7 @@ char *add_chars(char *num1, char *num2, char *r, int r_idx)
 		div = number / 10;
 	}
 
-	for (; *num2; num2--; r_idx--)
+	for (; *num2; num2--, r_idx--)
 	{
 		number = (*num2 - '0') + div;
 		r[r_idx] = (number % 10) + '0';
@@ -43,7 +43,7 @@ char *add_chars(char *num1, char *num2, char *r, int r_idx)
 	if (div && r_idx >= 0)
 	{
 		r[r_idx] = (div % 10) + '0';
-		return (r[r_idx]);
+		return (r + r_idx);
 	}
 	else if (div && r_idx < 0)
 	{
