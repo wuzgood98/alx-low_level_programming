@@ -9,7 +9,7 @@
 
 char *cap_string(char *str)
 {
-	int i = 0, j = 0;
+	int i = 0, j;
 	int separators[] = {32, 9, 10, 44, 59, 46, 33, 63, 34, 40, 41, 123, 125};
 
 	if (str[i] >= 'a' && str[i] <= 'z')
@@ -18,7 +18,7 @@ char *cap_string(char *str)
 
 	while (str[i] != '\0')
 	{
-		for ( ; j < 13; j++)
+		for (j = 0; j < 13; j++)
 		{
 			if (str[i] == separators[i])
 			{
