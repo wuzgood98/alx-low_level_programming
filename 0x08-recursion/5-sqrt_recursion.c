@@ -13,7 +13,8 @@ int sqrt_helper(int n, int start, int end)
 {
 	int mid;
 
-	/* Base case: If the start value exceeds the end value,
+	/**
+	 * Base case: If the start value exceeds the end value,
 	 * the square root is not found
 	 */
 	if (start > end)
@@ -22,20 +23,22 @@ int sqrt_helper(int n, int start, int end)
 	/* Find the mid value between the start and end values */
 	mid = (start + end) / 2;
 
-	/* Base case: If the square of the mid is equal to n,
+	/** 
+	 * Base case: If the square of the mid is equal to n,
 	 * return mid as the square root.
 	 */
 	if ((mid * mid) == n)
 		return (mid);
 
-	/* If the square of the mid is greater than n,
+	/**
+	 * If the square of the mid is greater than n,
 	 * search in the lower half
 	 */
 	if ((mid * mid) > n)
-		return sqrt_helper(n, start, mid - 1);
+		return (sqrt_helper(n, start, mid));
 	/* If the sqaure of mid is less than n, search in the upper half */
 	else
-		return sqrt_helper(n, mid + 1, end);
+		return (sqrt_helper(n, mid + 1, end));
 }
 
 /**
