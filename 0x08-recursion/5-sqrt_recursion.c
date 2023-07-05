@@ -23,7 +23,7 @@ int sqrt_helper(int n, int start, int end)
 	/* Find the mid value between the start and end values */
 	mid = (start + end) / 2;
 
-	/** 
+	/**
 	 * Base case: If the square of the mid is equal to n,
 	 * return mid as the square root.
 	 */
