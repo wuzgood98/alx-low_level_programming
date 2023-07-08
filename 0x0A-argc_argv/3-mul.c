@@ -11,15 +11,20 @@
 
 int main(int argc, char *argv[])
 {
-	int multiple = 0;
+	int multiple, num_1, num_2;
 
-	if (argc < 2)
+	if (argc < 3)
 	{
 		printf("Error\n");
 		return (1);
 	}
 
-	multiple = atoi(argv[1]) * atoi(argv[2]);
+	num_1 = atoi(argv[1]);
+	num_2 = atoi(argv[2]);
+
+	multiple = num_1 * num_2;
+
 	printf("%d\n", multiple);
+
 	return (0);
 }
