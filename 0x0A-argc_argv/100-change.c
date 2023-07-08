@@ -37,7 +37,7 @@ int main(int argc, char *argv[])
 		coins++;
 	}
 
-	printf ("%d\n", coins);
+	printf("%d\n", coins);
 
 	return (0);
 }
