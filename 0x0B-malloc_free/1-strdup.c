@@ -8,7 +8,7 @@
  * Return: length of str.
  */
 
-unsigned int _strlen(char *str)
+int _strlen(char *str)
 {
 	if (*str == '\0')
 		return (0);
@@ -26,8 +26,7 @@ unsigned int _strlen(char *str)
 char *_strdup(char *str)
 {
 	char *new_str;
-	unsigned int i = 0;
-	int length;
+	int i = 0, length;
 
 	if (str == NULL)
 		return (NULL);
