@@ -25,7 +25,7 @@ int _strlen(char *str)
 
 char *str_concat(char *s1, char *s2)
 {
-	int s1_length, s2_length, i, j, k;
+	int s1_length, s2_length, i, j;
 	char *temp_string;
 
 	s1_length = _strlen(s1);
@@ -48,8 +48,8 @@ char *str_concat(char *s1, char *s2)
 	for (i = 0; i < s1_length; i++)
 		temp_string[i] = s1[i];
 
-	k = s2_length;
-	for (s2_length = 0; s2_length <= k; s2_length++)
+	j = s2_length;
+	for (s2_length = 0; s2_length <= j; s2_length++)
 		temp_string[i] = s2[s2_length];
 
 	return (temp_string);
