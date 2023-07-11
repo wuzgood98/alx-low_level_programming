@@ -30,10 +30,7 @@ char *argstostr(int ac, char **av)
 	temp_av = malloc(sizeof(char) * (count + 1));
 
 	if (temp_av == NULL)
-	{
-		free(temp_av);
 		return (NULL);
-	}
 
 	i = 0;
 
