@@ -17,14 +17,10 @@ char *argstostr(int ac, char **av)
 	if (ac == 0 || av == NULL)
 		return (NULL);
 
-	while (a < ac)
+	for (a = 0; a < ac; a++)
 	{
-		while (av[a][b])
-		{
+		for (b = 0; av[a][b]; b++)
 			count++;
-			b++;
-		}
-		a++;
 	}
 
 	temp_av = malloc(sizeof(char) * (count + 1));
@@ -34,13 +30,12 @@ char *argstostr(int ac, char **av)
 
 	i = 0;
 
-	while (a < ac)
+	for (a = 0; a < ac; a++)
 	{
 		for (b = 0; av[a][b]; b++)
 			temp_av[i++] = av[a][b];
 
 		temp_av[i] = '\n';
-		a++;
 	}
 
 	temp_av[count] = '\0';
