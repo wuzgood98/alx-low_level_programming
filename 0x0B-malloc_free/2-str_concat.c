@@ -49,7 +49,7 @@ char *str_concat(char *s1, char *s2)
 		temp_string[i] = s1[i];
 
 	for (j = 0; j < s2_length; j++)
-		temp_string[j] = s2[j];
+		temp_string[i] = s2[j];
 
 	return (temp_string);
 
