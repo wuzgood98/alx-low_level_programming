@@ -12,7 +12,7 @@
 char *argstostr(int ac, char **av)
 {
 	char *temp_av;
-	int count = ac, a = 0, b = 0, i;
+	int count = ac, a, b, i;
 
 	if (ac == 0 || av == NULL)
 		return (NULL);
@@ -20,7 +20,7 @@ char *argstostr(int ac, char **av)
 	while (a < ac)
 	{
 		while (av[a][b])
-		{
+		}
 			count++;
 			b++;
 		}
@@ -39,7 +39,7 @@ char *argstostr(int ac, char **av)
 		for (b = 0; av[a][b]; b++)
 			temp_av[i++] = av[a][b];
 
-		temp_av[count] = '\n';
+		temp_av[i] = '\n';
 		a++;
 	}
 
