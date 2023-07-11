@@ -35,7 +35,7 @@ char *argstostr(int ac, char **av)
 		for (b = 0; av[a][b]; b++)
 			temp_av[i++] = av[a][b];
 
-		temp_av[i] = '\n';
+		temp_av[i++] = '\n';
 	}
 
 	temp_av[count] = '\0';
