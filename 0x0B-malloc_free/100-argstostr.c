@@ -20,7 +20,7 @@ char *argstostr(int ac, char **av)
 	while (a < ac)
 	{
 		while (av[a][b])
-		}
+		{
 			count++;
 			b++;
 		}
