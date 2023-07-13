@@ -89,7 +89,7 @@ int _numlen(char *argv[], int row)
 
 int main(int argc, char *argv[])
 {
-	int n1, n2, n_out, add, addn, i, j, k, ch;
+	int n1, n2, n_out, add, addn, idx, j, k, ch;
 	char *nums;
 
 	if (argc < 3)
@@ -97,7 +97,7 @@ int main(int argc, char *argv[])
 	n1 = _numlen(argv, 1), n2 = _numlen(argv, 2);
 	_iszero(argv), n_out = n1 + n2, nums = malloc(n_out + 1);
 	if (nums == NULL)
-		printf("Error\n"), exit(0);
+		printf("Error\n"), exit(98);
 	nums = _init_array(nums, n_out);
 	k = n_out - 1, i = n1 - 1, j = n2 - 1, ch = addn = 0;
 	for (; k >= 0; k--, i--)
