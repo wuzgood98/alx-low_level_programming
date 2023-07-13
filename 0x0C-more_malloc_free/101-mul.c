@@ -14,22 +14,18 @@ void _iszero(char *argv[])
 	int i, num1 = 1, num2 = 1;
 
 	for (i = 0; argv[1][i]; i++)
-	{
 		if (argv[1][i] != '0')
 		{
 			num1 = 0;
 			break;
 		}
-	}
 
 	for (i = 0; argv[2][i]; i++)
-	{
 		if (argv[2][i] != '0')
 		{
 			num2 = 0;
 			break;
 		}
-	}
 
 	if (num1 == 1 || num2 == 1)
 	{
@@ -92,7 +88,7 @@ int main(int argc, char *argv[])
 	int n1, n2, n_out, add, addn, i, j, k, ch;
 	char *nums;
 
-	if (argc < 3)
+	if (argc != 3)
 		printf("Error\n"), exit(98);
 	n1 = _numlen(argv, 1), n2 = _numlen(argv, 2);
 	_iszero(argv), n_out = n1 + n2, nums = malloc(n_out + 1);
