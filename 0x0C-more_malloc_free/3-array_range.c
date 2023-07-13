@@ -13,24 +13,19 @@
 
 int *array_range(int min, int max)
 {
-	int *new_array, i = min, size;
+	int *new_array, i, size;
 
 	if (min > max)
 		return (NULL);
 
 	size = (max - min) + 1;
-
 	new_array = malloc(sizeof(int) * size);
 
 	if (new_array == NULL)
 		return (NULL);
 
-	while (i < size)
-	{
-		new_array[i] = min;
-		min++;
-		i++;
-	}
+	for (i = 0; i < size; i++)
+		new_array[i] = min++;
 
 	return (new_array);
 }
