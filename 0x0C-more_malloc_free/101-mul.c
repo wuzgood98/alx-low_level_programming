@@ -89,7 +89,7 @@ int _numlen(char *argv[], int row)
 
 int main(int argc, char *argv[])
 {
-	int n1, n2, n_out, add, addn, idx, j, k, ch;
+	int n1, n2, n_out, add, addn, i, j, k, ch;
 	char *nums;
 
 	if (argc < 3)
