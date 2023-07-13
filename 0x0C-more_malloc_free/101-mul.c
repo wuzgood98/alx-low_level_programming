@@ -4,7 +4,7 @@
 int _strlen(char *s);
 char *init_array(int size);
 char *iterate(char *str);
-void prod(char *prod, char *mult, int digit, int zeroes);
+void product(char *prod, char *mult, int digit, int zeroes);
 void add_digits(char *prod1, char *prod2, int len);
 
 /**
@@ -15,10 +15,12 @@ void add_digits(char *prod1, char *prod2, int len);
  */
 int _strlen(char *s)
 {
-	if (*s == '\0')
-		return (0);
+	int length = 0;
 
-	return (1 + _strlen(s + 1));
+	while (*s++)
+		length++;
+
+	return (length);
 }
 
 /**
@@ -81,7 +83,7 @@ int to_int(char c)
 }
 
 /**
- * prod - multiplies a string of numbers by a single digit.
+ * product - multiplies a string of numbers by a single digit.
  * @prod: the buffer to store the result.
  * @mult: the string of numbers.
  * @digit: the single digit.
@@ -89,7 +91,7 @@ int to_int(char c)
  *
  * Return: nothing.
  */
-void prod(char *prod, char *mult, int digit, int zeroes)
+void product(char *prod, char *mult, int digit, int zeroes)
 {
 	int len, num, tens = 0;
 
@@ -205,7 +207,7 @@ int main(int argc, char *argv[])
 	for (i = _strlen(argv[2]) - 1; i >= 0; i--)
 	{
 		num = to_int(*(argv[2] + i));
-		prod(prod2, argv[1], num, zeroes++);
+		product(prod2, argv[1], num, zeroes++);
 		add_digits(prod1, prod2, size - 1);
 	}
 	for (i = 0; prod1[i]; i++)
