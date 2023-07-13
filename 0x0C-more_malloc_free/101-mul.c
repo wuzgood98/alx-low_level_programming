@@ -1,3 +1,4 @@
+#include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -36,10 +37,7 @@ char *init_array(int size)
 	array = malloc(sizeof(char) * size);
 
 	if (array == NULL)
-	{
-		printf("Error\n");
 		exit(98);
-	}
 
 	for (i = 0; i < (size - 1); i++)
 		array[i] = 'x';
