@@ -37,18 +37,18 @@ void _iszero(char *argv[])
 /**
  * _init_array - set memory to 0 in a new array.
  * @arr: char array.
- * @length: length of the array.
+ * @len: length of the array.
  *
  * Return: pointer of a char array.
  */
 
-char *_init_array(char *arr, int length)
+char *_init_array(char *arr, int len)
 {
 	int i = 0;
 
-	for (i = 0; i < length; i++)
+	for (i = 0; i < len; i++)
 		arr[i] = '0';
-	arr[length] = '\0';
+	arr[len] = '\0';
 	return (arr);
 }
 
@@ -82,47 +82,46 @@ int _numlen(char *argv[], int row)
  *
  * Return: always 0.
  */
-
 int main(int argc, char *argv[])
 {
-	int n1, n2, n_out, add, addn, i, j, k, ch;
-	char *nums;
+	int n1, n2, line, add, addn, i, j, k, ch;
+	char *num;
 
 	if (argc != 3)
 		printf("Error\n"), exit(98);
 	n1 = _numlen(argv, 1), n2 = _numlen(argv, 2);
-	_iszero(argv), n_out = n1 + n2, nums = malloc(n_out + 1);
-	if (nums == NULL)
+	_iszero(argv), line = n1 + n2, num = malloc(line + 1);
+	if (num == NULL)
 		printf("Error\n"), exit(98);
-	nums = _init_array(nums, n_out);
-	k = n_out - 1, i = n1 - 1, j = n2 - 1, ch = addn = 0;
+	num = _init_array(num, line);
+	k = line - 1, i = n1 - 1, j = n2 - 1, ch = addn = 0;
 	for (; k >= 0; k--, i--)
 	{
 		if (i < 0)
 		{
 			if (addn > 0)
 			{
-				add = (nums[k] - '0') + addn;
+				add = (num[k] - '0') + addn;
 				if (add > 9)
-					nums[k - 1] = (add / 10) + '0';
-				nums[k] = (add % 10) + '0';
+					num[k - 1] = (add / 10) + '0';
+				num[k] = (add % 10) + '0';
 			}
-			i = n1 - 1, j--, addn = 0, ch++, k = n_out - (1 + ch);
+			i = n1 - 1, j--, addn = 0, ch++, k = line - (1 + ch);
 		}
 		if (j < 0)
 		{
-			if (nums[0] != '0')
+			if (num[0] != '0')
 				break;
-			n_out--;
-			free(nums), nums = malloc(n_out + 1), nums = _init_array(nums, n_out);
-			k = n_out - 1, i = n1 - 1, j = n2 - 1, ch = addn = 0;
+			line--;
+			free(num), num = malloc(line + 1), num = _init_array(num, line);
+			k = line - 1, i = n1 - 1, j = n2 - 1, ch = addn = 0;
 		}
 		if (j >= 0)
 		{
-			add = ((argv[1][i] - '0') * (argv[2][j] - '0')) + (nums[k] - '0') + addn;
-			addn = add / 10, nums[k] = (add % 10) + '0';
+			add = ((argv[1][i] - '0') * (argv[2][j] - '0')) + (num[k] - '0') + addn;
+			addn = add / 10, num[k] = (add % 10) + '0';
 		}
 	}
-	printf("%s\n", nums);
+	printf("%s\n", num);
 	return (0);
 }
