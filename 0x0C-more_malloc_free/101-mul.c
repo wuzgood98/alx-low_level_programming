@@ -15,12 +15,10 @@ void add_digits(char *prod1, char *prod2, int len);
  */
 int _strlen(char *s)
 {
-	int length = 0;
+	if (*s == '\0')
+		return (0);
 
-	while (*s++)
-		length++;
-
-	return (length);
+	return (1 + _strlen(s + 1));
 }
 
 /**
@@ -38,7 +36,10 @@ char *init_array(int size)
 	array = malloc(sizeof(char) * size);
 
 	if (array == NULL)
+	{
+		printf("Error\n");
 		exit(98);
+	}
 
 	for (i = 0; i < (size - 1); i++)
 		array[i] = 'x';
