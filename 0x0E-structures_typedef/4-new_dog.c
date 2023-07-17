@@ -1,4 +1,4 @@
-#include "dog.c"
+#include "dog.h"
 #include <stdlib.h>
 
 int _strlen(char *s);
