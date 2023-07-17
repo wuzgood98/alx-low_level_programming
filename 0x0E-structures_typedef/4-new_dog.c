@@ -1,5 +1,5 @@
 #include "dog.c"
-#include <stdio.h>
+#include <stdlib.h>
 
 /**
  * _strlen - finds the length of a string
@@ -11,6 +11,7 @@ int _strlen(char *s)
 {
 	if (*s == '\0')
 		return (0);
+
 	return (1 + _strlen(s + 1));
 }
 
@@ -23,15 +24,15 @@ int _strlen(char *s)
  */
 char *_strcpy(char *dest, char *src)
 {
-	int i = 0;
+	int index = 0;
 
-	while (src[i] != '\0')
+	while (index >= 0)
 	{
-		dest[i] = src[i];
-		i++;
+		dest[index] = src[index];
+		if (src[index] == '\0')
+			break;
+		index++;
 	}
-
-	dest[i] = '\0';
 
 	return (dest);
 }
