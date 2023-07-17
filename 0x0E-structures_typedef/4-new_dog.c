@@ -1,6 +1,10 @@
 #include "dog.c"
 #include <stdlib.h>
 
+int _strlen(char *s);
+char *_strcpy(char *dest, char *src);
+dog_t *new_dog(char *name, float age, char *owner);
+
 /**
  * _strlen - finds the length of a string
  * @s: string.
@@ -43,37 +47,37 @@ char *_strcpy(char *dest, char *src)
  * @age: age of the dog.
  * @owner: owner of the dog.
  *
- * Return: NULL if the fuction fails, otherwise the struct of dog.
+ * Return: NULL if the fuction fails, otherwise the new struct of dog.
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	dog_t *new_dog;
+	dog_t *perro;
 
 	if (name == NULL || owner == NULL || age < 0)
 		return (NULL);
 
-	new_dog = malloc(sizeof(struct dog_t));
-	if (new_dog == NULL)
+	perro = malloc(sizeof(dog_t));
+	if (perro == NULL)
 		return (NULL);
 
-	new_dog->name = malloc(sizeof(char) * (_strlen(name) + 1));
-	if (new_dog->name == NULL)
+	perro->name = malloc(sizeof(char) * (_strlen(name) + 1));
+	if (perro->name == NULL)
 	{
-		free(new_dog);
+		free(perro);
 		return (NULL);
 	}
 
-	new_dog->age = age;
-
-	new_dog->owner = malloc(sizeof(char) * (_strlen(owner) + 1));
-	if(new_dog->owner == NULL)
+	perro->owner = malloc(sizeof(char) * (_strlen(owner) + 1));
+	if(perro->owner == NULL)
 	{
-		free(new_dog);
+		free(perro);
+		free(perro->name);
 		return (NULL);
 	}
 
-	new_dog->name = _strcpy(new_dog->name, name);
-	new_dog->owner = _strcpy(new_dog->owner, owner);
+	perro->name = _strcpy(perro->name, name);
+	perro->age = age;
+	perro->owner = _strcpy(perro->owner, owner);
 
-	return (new_dog);
+	return (perro);
 }
