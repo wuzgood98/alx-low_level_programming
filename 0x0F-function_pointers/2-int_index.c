@@ -2,7 +2,7 @@
 
 /**
  * int_index - searches for an integer.
- * @array: integer arrat input.
+ * @array: integer array input.
  * @size: size of the array.
  * @cmp: a pointer to the function to be used to compare values.
  *
@@ -13,7 +13,7 @@
 
 int int_index(int *array, int size, int (*cmp)(int))
 {
-	unsigned int i;
+	int i;
 
 	if (array && cmp)
 	{
