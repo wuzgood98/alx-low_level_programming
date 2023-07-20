@@ -8,24 +8,24 @@
  */
 void print_all(const char * const format, ...)
 {
-	unsigned int index, jindex, c = 0;
+	unsigned int index = 0, j, c = 0;
 	char *s = "";
 	va_list args;
 	const char arg_types[] = "cifs";
 
 	va_start(args, format);
-	while (format && *format)
+	while (format && format[index])
 	{
-		jindex = 0;
+		j = 0;
 		while (arg_types[j])
 		{
-			if (*format == arg_types[j] && c)
+			if (format[index] == arg_types[j] && c)
 			{
 				print(", ");
 				break;
 			} j++;
 		}
-		switch (*format)
+		switch (format[index])
 		{
 			case 'c':
 				printf("%c", va_arg(args, int)), c = 1;
@@ -45,7 +45,7 @@ void print_all(const char * const format, ...)
 				}
 				printf("%s", s);
 				break;
-		} format++;
+		} index++;
 	}
 	printf("\n"), va_end(args);
 }
