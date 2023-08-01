@@ -10,16 +10,12 @@ void free_listint(listint_t *head)
 {
 	listint_t *current;
 
-	while (head != NULL)
+	while ((current = head) != NULL)
 	{
 		/* Store the reference to the next node */
-		current = head->next;
+		head = head->next;
 
 		/* free the memory from the list */
 		free(current);
-		free(head);
-
-		/* Move to the next node */
-		head = current;
 	}
 }
