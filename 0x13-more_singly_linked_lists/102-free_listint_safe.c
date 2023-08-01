@@ -47,7 +47,7 @@ size_t free_listint_safe(listint_t **h)
 }
 
 /**
- * free_ptr_list - frees a linked list.
+ * free_ptr_list2 - frees a linked list.
  * @head: pointer to the head of the list.
  *
  * Return: nothing;
