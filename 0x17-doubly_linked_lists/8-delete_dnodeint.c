@@ -36,7 +36,7 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 				if (hd_1->next != NULL)
 					hd_1->next->prev = hd_2;
 			}
-			free(hd_2);
+			free(hd_1);
 			return (1);
 		}
 		hd_2 = hd_1;
